@@ -31,5 +31,8 @@ Month: Month (January till June) or 'all'
 Day: Day in Week (Monday to Sunday) or 'all'
 df: The dataframe which has been filtered
 
+### Filtering Rule for Month:
+if month != 'all': then we need to filter the month
+
 ### Credits
 Template from: **Udacity**
