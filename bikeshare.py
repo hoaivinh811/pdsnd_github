@@ -171,6 +171,10 @@ def user_stats(df):
 
 
 def display_data(df):
+    """
+    This function will let the user view 5 rows of raw data.
+    They will be asked if they want to see the next 5 rows by typing 'yes' until all the data is showned
+    """
     view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes to view or input any key to exit\n')
     if view_data == 'yes':    
         start_loc = 0
