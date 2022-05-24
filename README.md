@@ -25,6 +25,11 @@ trip_duration_stats(df)
 user_stats(df)
 display_data(df)
 main()
+**Variable:**
+city: City
+Month: Month (January till June) or 'all'
+Day: Day in Week (Monday to Sunday) or 'all'
+df: The dataframe which has been filtered
 
 ### Credits
 Template from: **Udacity**
