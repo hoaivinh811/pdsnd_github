@@ -170,6 +170,25 @@ def user_stats(df):
     print('-'*40)
 
 
+def display_data(df):
+    """
+    This function will let the user view 5 rows of raw data.
+    They will be asked if they want to see the next 5 rows by typing 'yes' until all the data is showned
+    """
+    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes to view or input any key to exit\n')
+    if view_data == 'yes':    
+        start_loc = 0
+        print(df.iloc[start_loc : start_loc +5])
+        start_loc += 5
+        while (view_data == 'yes') & (start_loc < len(df.index)):
+            view_data = input("Do you wish to view the next 5 rows of individual trip data?\n: yes to continue or input any key to exit\n").lower()
+            if view_data == 'yes':
+                print(df.iloc[start_loc : start_loc +5])
+                start_loc += 5
+        else:
+            print('All the data is displayed')
+
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -179,6 +198,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+        display_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
