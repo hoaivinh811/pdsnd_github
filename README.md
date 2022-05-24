@@ -34,5 +34,8 @@ df: The dataframe which has been filtered
 ### Filtering Rule for Month:
 if month != 'all': then we need to filter the month
 
+### Filtering Rule for day:
+if day != 'all': then we need to filter the day of week
+
 ### Credits
 Template from: **Udacity**
